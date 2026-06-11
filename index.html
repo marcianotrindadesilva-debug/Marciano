@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultura Sustentável: Rotação de Culturas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Rotação de Culturas</h1>
+        <p>O pilar da agricultura sustentável para a saúde do solo.</p>
+    </header>
+
+    <main class="container">
+        <section class="info-section">
+            <h2>O que é a Rotação de Culturas?</h2>
+            <p>É uma técnica agrícola que consiste em alternar espécies vegetais em uma mesma área agrícola em anos consecutivos. O objetivo é melhorar as características físicas, químicas e biológicas do solo, além de auxiliar no controle de pragas e doenças.</p>
+            
+            <h3>Principais Benefícios:</h3>
+            <ul>
+                <li><strong>Reposição de Nitrogênio:</strong> Leguminosas (como a soja) fixam nitrogênio no solo.</li>
+                <li><strong>Quebra de Ciclos de Pragas:</strong> Mudar a cultura tira o alimento de pragas específicas.</li>
+                <li><strong>Proteção do Solo:</strong> Plantas com raízes diferentes melhoram a estrutura da terra.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="simulator-section">
+            <h2>Simulador de Impacto no Solo</h2>
+            <p>Escolha a cultura para o próximo ano e veja o impacto na saúde do solo (Nutrientes):</p>
+            
+            <div class="controls">
+                <button onclick="simularCultura('milho')">Plantar Milho (Consome Nitrogênio)</button>
+                <button onclick="simularCultura('soja')">Plantar Soja (Fixa Nitrogênio)</button>
+                <button onclick="simularCultura('pousio')">Deixar em Pousio (Recuperação Natural)</button>
+            </div>
+
+            <div class="status-box">
+                <p>Ano Atual: <span id="ano-atual">1</span></p>
+                <p>Cultura Atual: <span id="cultura-atual">Nenhuma</span></p>
+                <div class="bar-container">
+                    <label>Saúde do Solo: </label>
+                    <div class="progress-bar">
+                        <div id="status-solo" style="width: 50%;"></div>
+                    </div>
+                    <span id="texto-solo">50% (Equilibrado)</span>
+                </div>
+            </div>
+            
+            <button class="btn-reset" onclick="resetarSimulador()">Reiniciar Solo</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido para fins educacionais sobre Sustentabilidade.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
